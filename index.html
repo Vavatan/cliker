@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en_US">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+        <link rel="stylesheet" href="./style.css" type="text/css">
+        <script defer src="./main.js"></script>
+    </head>
+    <body>
+        <div class="text add-info" style="top: 5vh; left: 10vw">
+            <p>за клик</p>
+            <p>+ <span id="add-click">1</span></p>
+        </div>
+        <div class="text add-info" style="top: 5vh; right: 10vw">
+            <p>в секунду</p>
+            <p>+ <span id="add-idle">0</span></p>
+        </div>
+
+        <div
+            id="score"
+            class="text"
+            style="top: 5vh; left: 50vw"
+        >0</div>
+
+        <img
+            id="main-button"
+            class="button"
+            width="233"
+            height="198"
+            src="./button.png"
+            style="top: 50vh; left: 50vw"
+        >
+
+        <div class="shop-container">
+
+            <div class="shop" data-type="click" data-add="1" data-price="100">
+                <div class="title">Буст клика + 1</div>
+                <div class="price">Цена: <b>100</b> </div>
+            </div>
+
+            <div class="shop" data-type="idle" data-add="1" data-price="100">
+                <div class="title">Буст + 1 в секунду</div>
+                <div class="price">Цена: <b>100</b> </div>
+            </div>
+
+            <div class="shop" data-type="idle" data-add="1" data-price="100">
+                <div class="title">Буст + 1 в секунду</div>
+                <div class="price">Цена: <b>100</b> </div>
+            </div>
+        
+
+            <div class="shop" data-type="idle" data-add="1" data-price="100">
+                <div class="title">Буст + 1 в секунду</div>
+                <div class="price">Цена: <b>100</b> </div>
+            </div>
+        
+            <div class="shop" data-type="idle" data-add="5" data-price="500">
+                <div class="title">Буст + 5 в секунду</div>
+                <div class="price">Цена: <b>500</b> </div>
+            </div>
+        </div>
+        
+    </body>
+</html>
