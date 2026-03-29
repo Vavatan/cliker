@@ -6,6 +6,8 @@ let scoreByClick = 1 // сколько добавляем за клик
 let scoreBySecond = 0 // сколько добавляем каждую секунду
 let click_sound = new Audio('./click.mp3')
 let bg_sound = new Audio ('./bg.mp3')
+let error_sound = new Audio ('./error.mp3')
+let success_sound = new Audio ('./success.mp3')
 let is_bg = false
 setInterval(addScoreBySecond, 1000)
 
@@ -54,6 +56,7 @@ function getShopClick(event) {
     const add = +shop.dataset.add
     const type = shop.dataset.type
     if (score < price) {
+        error_sound.play() // звук нехвватки денег
         event.target.classList.add('red-border')
         setTimeout( () => event.target.classList.remove('red-border'), 300 )
         return
@@ -67,6 +70,8 @@ function getShopClick(event) {
         scoreBySecond = scoreBySecond + add
         idleText.innerText = scoreBySecond
     }
+    success_sound.play() // звук когда деньги есть
+
     shop.classList.add('lime-border')
     setTimeout( () => shop.classList.remove('lime-border'), 300 )
 }
